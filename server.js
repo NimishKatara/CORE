@@ -11,7 +11,6 @@ const io = socketIO(server);
 app.use(express.static(path.join(__dirname, 'public')));
 io.on('connection', (socket) => {
     console.log('A user connected.');
-
    
     socket.on('chatMessage', (msg) => {
         io.emit('chatMessage', msg);
