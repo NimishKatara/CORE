@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Define the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Set the viewport for responsiveness across devices -->
     <title>Anonymous Group Chat</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Title for the browser tab -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to the external CSS file for styling -->
     <script src="/socket.io/socket.io.js"></script>
+    <!-- Load Socket.IO for real-time communication -->
     <script src="app.js"></script>
-</head>
-<body>
+    <!-- Load the JavaScript file that handles chat functionality -->
+  </head>
+  <body>
     <div class="chat-container">
-        <div id="chat-window" class="chat-window">
-        </div>
-        <input type="text" id="chat-input" placeholder="Type your message..." autofocus>
+      <!-- Main container for the chat interface -->
+      <div id="chat-window" class="chat-window">
+        <!-- Chat window where messages will be displayed -->
+      </div>
+      <div class="chat-input-field-container">
+        <input
+          type="text"
+          id="chat-input"
+          placeholder="Message CORE"
+          autofocus
+        />
+        <!-- Input field where users can type messages -->
         <button id="send-btn">Send</button>
+        <!-- Send button for sending messages -->
+      </div>
     </div>
-
-</body>
+  </body>
 </html>
