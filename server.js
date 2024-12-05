@@ -13,13 +13,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
-app.use('/api', createProxyMiddleware({
-    target: 'https://4a76-34-86-12-253.ngrok-free.app',
-    changeOrigin: true,
-    pathRewrite: {
-        '^/api': '/generate', 
-    },
-}));
 
 io.on('connection', (socket) => {
     console.log('A user connected.');
@@ -57,4 +50,5 @@ async function moderateMessage(text) {
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
+    console.log(`Open the application at: http://localhost:${PORT}`);
 });
